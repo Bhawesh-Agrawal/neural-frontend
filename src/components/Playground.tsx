@@ -144,7 +144,10 @@ export default function Playground() {
           </CardHeader>
           <CardContent>
             {loading ? (
-              <Progress value={50} className="w-full mb-4" />
+              <>
+                <Progress value={50} className="w-full mb-4" />
+                <p>Training in process ..</p>
+              </>
             ) : error ? (
               <p className="text-red-500 text-center">{error}</p>
             ) : trainData ? (
